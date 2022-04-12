@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# need to make the directory before we can create the storage pool
+mkdir -p /opt/libvirt_images/cabo0cuomwrk03_pool
+
+virt-install \
+  --hvm \
+  --connect qemu:///system \
+  --network=bridge:br0,mac=52:54:00:9b:13:17 \
+  --pxe \
+  --graphics vnc \
+  --name cabo0cuomwrk03_pxe \
+  --ram=16384 \
+  --vcpus=4 \
+  --os-type=linux \
+  --os-variant=fedora-coreos-8 \
+  --disk path=/opt/libvirt_images/cabo0cuomwrk03_pool/cabo0cuomwrk03_amd64.qcow2,size=120
+

@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# stop and remove the server configuration
+virsh destroy cabo0cuomctl03_pxe
+virsh undefine cabo0cuomctl03_pxe
+
+# stop and remove the storage pool configuration
+virsh pool-destroy cabo0cuomctl03_pool
+virsh pool-undefine cabo0cuomctl03_pool
+
+# remove the guest
+rm -rf /opt/libvirt_images/cabo0cuomctl03_pool
+

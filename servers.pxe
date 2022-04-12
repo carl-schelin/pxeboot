@@ -1,0 +1,32 @@
+boulder,    nikodemus,    management,  bldr0cuombst01,   br0,   52:54:00:9b:12:11,   192.168.101.100,    120,   16384,   4
+boulder,    nikodemus,    control,     bldr0cuomctl01,   br0,   52:54:00:9b:12:12,   192.168.101.101,    120,   16384,   4
+boulder,    nikodemus,    control,     bldr0cuomctl02,   br0,   52:54:00:9b:12:13,   192.168.101.102,    120,   16384,   4
+boulder,    nikodemus,    control,     bldr0cuomctl03,   br0,   52:54:00:9b:12:14,   192.168.101.103,    120,   16384,   4
+boulder,    nikodemus,    workers,     bldr0cuomwrk01,   br0,   52:54:00:9b:12:15,   192.168.101.111,    120,   16384,   4
+boulder,    nikodemus,    workers,     bldr0cuomwrk02,   br0,   52:54:00:9b:12:16,   192.168.101.112,    120,   16384,   4
+boulder,    nikodemus,    workers,     bldr0cuomwrk03,   br0,   52:54:00:9b:12:17,   192.168.101.113,    120,   16384,   4
+
+cabo,       nikodemus,   management,   cabo0cuombst01,   br0,   52:54:00:9b:13:11,   192.168.102.100,    120,   16384,   4
+cabo,       nikodemus,   control,      cabo0cuomctl01,   br0,   52:54:00:9b:13:12,   192.168.102.101,    120,   16384,   4
+cabo,       nikodemus,   control,      cabo0cuomctl02,   br0,   52:54:00:9b:13:13,   192.168.102.102,    120,   16384,   4
+cabo,       nikodemus,   control,      cabo0cuomctl03,   br0,   52:54:00:9b:13:14,   192.168.102.103,    120,   16384,   4
+cabo,       nikodemus,   workers,      cabo0cuomwrk01,   br0,   52:54:00:9b:13:15,   192.168.102.111,    120,   16384,   4
+cabo,       nikodemus,   workers,      cabo0cuomwrk02,   br0,   52:54:00:9b:13:16,   192.168.102.112,    120,   16384,   4
+cabo,       nikodemus,   workers,      cabo0cuomwrk03,   br0,   52:54:00:9b:13:17,   192.168.102.113,    120,   16384,   4
+
+tatooine,   nikdoemus,   management,   tato0cuombst01,   br0,   52:54:00:9b:14:11,   192.168.103.100,    120,   16384,   4
+tatooine,   nikdoemus,   control,      tato0cuomctl01,   br0,   52:54:00:9b:14:12,   192.168.103.101,    120,   16384,   4
+tatooine,   nikdoemus,   control,      tato0cuomctl02,   br0,   52:54:00:9b:14:13,   192.168.103.102,    120,   16384,   4
+tatooine,   nikdoemus,   control,      tato0cuomctl03,   br0,   52:54:00:9b:14:14,   192.168.103.103,    120,   16384,   4
+tatooine,   nikdoemus,   workers,      tato0cuomwrk01,   br0,   52:54:00:9b:14:15,   192.168.103.111,    120,   16384,   4
+tatooine,   nikdoemus,   workers,      tato0cuomwrk02,   br0,   52:54:00:9b:14:16,   192.168.103.112,    120,   16384,   4
+tatooine,   nikdoemus,   workers,      tato0cuomwrk03,   br0,   52:54:00:9b:14:17,   192.168.103.113,    120,   16384,   4
+
+longmont,   nikodemus,   management,   lnmt1cuombst01,   br0,   52:54:00:9b:15:11,   192.168.104.100,    120,   16384,   4
+longmont,   nikodemus,   control,      lnmt1cuomctl01,   br0,   52:54:00:9b:15:12,   192.168.104.101,    120,   16384,   4
+longmont,   nikodemus,   control,      lnmt1cuomctl02,   br0,   52:54:00:9b:15:13,   192.168.104.102,    120,   16384,   4
+longmont,   nikodemus,   control,      lnmt1cuomctl03,   br0,   52:54:00:9b:15:14,   192.168.104.103,    120,   16384,   4
+longmont,   nikodemus,   workers,      lnmt1cuomwrk01,   br0,   52:54:00:9b:15:15,   192.168.104.111,    120,   16384,   4
+longmont,   nikodemus,   workers,      lnmt1cuomwrk02,   br0,   52:54:00:9b:15:16,   192.168.104.112,    120,   16384,   4
+longmont,   nikodemus,   workers,      lnmt1cuomwrk03,   br0,   52:54:00:9b:15:17,   192.168.104.113,    120,   16384,   4
+

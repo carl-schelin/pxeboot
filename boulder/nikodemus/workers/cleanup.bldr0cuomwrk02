@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# stop and remove the server configuration
+virsh destroy bldr0cuomwrk02_pxe
+virsh undefine bldr0cuomwrk02_pxe
+
+# stop and remove the storage pool configuration
+virsh pool-destroy bldr0cuomwrk02_pool
+virsh pool-undefine bldr0cuomwrk02_pool
+
+# remove the guest
+rm -rf /opt/libvirt_images/bldr0cuomwrk02_pool
+

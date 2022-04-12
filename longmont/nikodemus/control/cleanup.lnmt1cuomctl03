@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# stop and remove the server configuration
+virsh destroy lnmt1cuomctl03_pxe
+virsh undefine lnmt1cuomctl03_pxe
+
+# stop and remove the storage pool configuration
+virsh pool-destroy lnmt1cuomctl03_pool
+virsh pool-undefine lnmt1cuomctl03_pool
+
+# remove the guest
+rm -rf /opt/libvirt_images/lnmt1cuomctl03_pool
+

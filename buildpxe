@@ -1,0 +1,49 @@
+#!/bin/ksh
+
+# set the current location so we know where to return to
+HERE=$(pwd)
+
+for i in $(grep -v "^#" servers.pxe | sed -e "s/ //g")
+do
+  SITENAME=$(  echo $i | cut -f1  -d,)
+  HOSTNAME=$(  echo $i | cut -f2  -d,)
+  TYPENAME=$(  echo $i | cut -f3  -d,)
+  SERVER=$(    echo $i | cut -f4  -d,)
+  BRIDGE=$(    echo $i | cut -f5  -d,)
+  MACADDRESS=$(echo $i | cut -f6  -d,)
+  STORAGE=$(   echo $i | cut -f8  -d,)
+  MEMORY=$(    echo $i | cut -f9  -d,)
+  VCPUS=$(     echo $i | cut -f10 -d,)
+
+  SITEPATH=${SITENAME}/${HOSTNAME}/${TYPENAME}
+
+  echo "Building site: ${SITENAME}"
+
+# return to the default directory
+  cd ${HERE}
+
+# create the directory first.
+  if [[ ! -d ${SITEPATH} ]]
+  then
+    mkdir -p ${SITEPATH}
+  fi
+
+# build the server cleanup script
+  sed -e "s/SERVER/${SERVER}/g" \
+      templates/cleanup > ${SITEPATH}/cleanup.${SERVER}
+
+# build the server creation script
+  sed -e "s/SERVER/${SERVER}/g" \
+      -e "s/BRIDGE/${BRIDGE}/g" \
+      -e "s/MACADDRESS/${MACADDRESS}/g" \
+      -e "s/STORAGE/${STORAGE}/g" \
+      -e "s/MEMORY/${MEMORY}/g" \
+      -e "s/VCPUS/${VCPUS}/g" \
+      templates/create > ${SITEPATH}/create.${SERVER}
+
+# set to execute
+    chmod 755 ${SITEPATH}/cleanup.${SERVER}
+    chmod 755 ${SITEPATH}/create.${SERVER}
+
+done
+

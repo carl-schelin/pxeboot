@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# need to make the directory before we can create the storage pool
+mkdir -p /opt/libvirt_images/SERVER_pool
+
+virt-install \
+  --hvm \
+  --connect qemu:///system \
+  --network=bridge:BRIDGE,mac=MACADDRESS \
+  --pxe \
+  --graphics vnc \
+  --name SERVER_pxe \
+  --ram=MEMORY \
+  --vcpus=VCPUS \
+  --os-type=linux \
+  --os-variant=fedora-coreos-8 \
+  --disk path=/opt/libvirt_images/SERVER_pool/SERVER_amd64.qcow2,size=STORAGE
+

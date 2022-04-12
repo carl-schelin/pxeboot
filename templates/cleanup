@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# stop and remove the server configuration
+virsh destroy SERVER_pxe
+virsh undefine SERVER_pxe
+
+# stop and remove the storage pool configuration
+virsh pool-destroy SERVER_pool
+virsh pool-undefine SERVER_pool
+
+# remove the guest
+rm -rf /opt/libvirt_images/SERVER_pool
+

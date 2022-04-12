@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# need to make the directory before we can create the storage pool
+mkdir -p /opt/libvirt_images/bldr0cuomwrk02_pool
+
+virt-install \
+  --hvm \
+  --connect qemu:///system \
+  --network=bridge:br0,mac=52:54:00:9b:12:16 \
+  --pxe \
+  --graphics vnc \
+  --name bldr0cuomwrk02_pxe \
+  --ram=16384 \
+  --vcpus=4 \
+  --os-type=linux \
+  --os-variant=fedora-coreos-8 \
+  --disk path=/opt/libvirt_images/bldr0cuomwrk02_pool/bldr0cuomwrk02_amd64.qcow2,size=120
+

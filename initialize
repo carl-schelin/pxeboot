@@ -1,0 +1,27 @@
+#!/bin/ksh
+
+# this script should be run only one time. 
+# If any of the configurations are in place, the script should end
+# it is supposed to be idempotent so if it's run again, it should just 
+# exit with, 'already in place'
+
+HERE=$(pwd)
+HOSTNAME=$(hostname|cut -f1 -d.)
+
+for i in $(find $HOSTNAME  -type d -print)
+do
+  cd ${i}
+
+  for j in $(find . -type f -name create\*)
+  do
+    echo "./$i"
+  don
+
+  cd ${HERE}
+
+done
+
+virsh -c qemu:///system list --all
+
+virsh -c qemu:///system pool-list --all
+

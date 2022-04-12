@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# stop and remove the server configuration
+virsh destroy tato0cuomctl01_pxe
+virsh undefine tato0cuomctl01_pxe
+
+# stop and remove the storage pool configuration
+virsh pool-destroy tato0cuomctl01_pool
+virsh pool-undefine tato0cuomctl01_pool
+
+# remove the guest
+rm -rf /opt/libvirt_images/tato0cuomctl01_pool
+
